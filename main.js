@@ -19,12 +19,20 @@ Object.entries(data).forEach(([key, value]) => {
     let img = document.createElement("img");
     img.src = "imgs/" + key;
     img.alt = value.title;
+    // set image position to absolute
+    img.style.position = "absolute";
+    // set image position to random
+    
+    
     
     if (tmp%2 == 0) {
         document.getElementById("haut").appendChild(img);
+        img.style.left = "calc(calc(50vh - 50px)*"+ (tmp-2)/2 + ")";
+
     }
     else {
         document.getElementById("bas").appendChild(img);
+        
     }
 
 });
