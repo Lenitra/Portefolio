@@ -65,7 +65,7 @@ main div#bas{
 
 main div img {
     
-    height: 100%;
+    height: calc(50vh - 50px);
     float: left;
     margin:0;
     object-fit: cover;
