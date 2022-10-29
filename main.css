@@ -1,17 +1,20 @@
 
 @keyframes scroll {
-    95% {
-        left: -100%;
+from {
+        transform: translateX(0px);
     }
 
-    100% {
-        left: 0;
+    to {
+        
+        transform: translateX(calc(-5*(50vh - 50px)));
     }
 }
+
+
 html {
     height: 100vh;
     width: 100vw;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 *{
@@ -67,14 +70,15 @@ nav a:hover {
 }
 
 main{
-    width: 100vw;
+    width: 20000vw;
     height: calc(100vh - 100px);
     top: 100px;
     background-color: violet;
     overflow-y: hidden;
+    /* overflow-x: visible; */
     white-space: nowrap;
-    overflow-x: scroll;
-    animation: scroll 10s linear 1s infinite;
+    /* overflow-x: scroll; */
+    animation: scroll 60s linear 0s infinite;
     
 }
 
