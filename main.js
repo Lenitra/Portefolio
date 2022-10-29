@@ -8,31 +8,43 @@ let data = {
     "24.png": {"title": "Titre de l'image", "desc": "Description de l'image"},
     "25.png": {"title": "Titre de l'image", "desc": "Description de l'image"},
     "30.png": {"title": "Titre de l'image", "desc": "Description de l'image"},
-    // "32.png": {"title": "Titre de l'image", "desc": "Description de l'image"},
+    "32.png": {"title": "Titre de l'image", "desc": "Description de l'image"},
 }
 
 let tmp = 1;
+let img1 = "";
 Object.entries(data).forEach(([key, value]) => {
-    console.log(key, value);
+    // console.log(key, value);
     tmp++;
-    
+    if (img1 == "" && tmp % 2 == 1) {
+        img1 = key;
+    }
     let img = document.createElement("img");
     img.src = "imgs/" + key;
     img.alt = value.title;
     // set image position to absolute
-    img.style.position = "absolute";
+    // img.style.position = "relative";
     // set image position to random
     
     
     
     if (tmp%2 == 0) {
         document.getElementById("haut").appendChild(img);
-        img.style.left = "calc(calc(50vh - 50px)*"+ (tmp-2)/2 + ")";
+        // img.style.left = "calc(calc(50vh - 50px)*"+ tmp-4 + ")";
 
     }
     else {
         document.getElementById("bas").appendChild(img);
-        
+        // img.style.left = "calc(calc(50vh - 50px)*"+ (tmp-3)/2 + ")";
     }
-
+    
 });
+
+
+
+if (tmp%2==0) {
+    let img = document.createElement("img");
+    img.src = "imgs/" + img1;
+    img.alt = data[img1].title;
+    document.getElementById("bas").appendChild(img);
+}
