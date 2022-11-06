@@ -81,13 +81,13 @@ main{
     /* overflow-x: visible; */
     white-space: nowrap;
     /* overflow-x: scroll; */
-    animation: scroll 60s linear 0s infinite;
+    animation: scroll 30s linear 0s infinite;
     
 }
 
 main div#haut, main div#bas {
     height: calc(50vh - 50px);
-    background-color: red;
+    /* background-color: red; */
     margin: 0;
     padding: 0;
 }
