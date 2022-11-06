@@ -6,7 +6,7 @@ from {
 
     to {
         
-        transform: translateX(calc(-5*(50vh - 50px)));
+        transform: translateX(calc(-5*(50vh - 54px)));
     }
 }
 
