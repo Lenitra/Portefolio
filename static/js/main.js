@@ -22,7 +22,7 @@ Object.entries(data).forEach(([key, value]) => {
         img1 = key;
     }
     let img = document.createElement("img");
-    img.src = "static/imgs/imgs/" + key;
+    img.src = "../static/imgs/imgs/" + key;
     img.alt = value.title;
     
     
@@ -41,7 +41,7 @@ Object.entries(data).forEach(([key, value]) => {
 
 if (tmp%2==0) {
     let img = document.createElement("img");
-    img.src = "static/imgs/imgs/" + img1;
+    img.src = "../static/imgs/imgs/" + img1;
     img.alt = data[img1].title;
     document.getElementById("bas").appendChild(img);
 }
@@ -56,7 +56,7 @@ Object.entries(data).forEach(([key, value]) => {
         img1 = key;
     }
     let img = document.createElement("img");
-    img.src = "static/imgs/imgs/" + key;
+    img.src = "../static/imgs/imgs/" + key;
     img.alt = value.title;
     // set image position to absolute
     // img.style.position = "relative";
