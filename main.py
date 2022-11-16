@@ -13,14 +13,13 @@ def all_exception_handler(e):
 
 @app.route('/')
 def index():
-    # get all image names from the folder static\imgs\imgs
-    # images = os.listdir(os.path.join(app.root_path, 'static/imgs/imgs'))
-    return render_template('index.html')
+    tmp = os.listdir('static/imgs/imgs')
+    imgs = ""
+    for i in tmp:
+        imgs += i + ","
+    nb = int(len(tmp)/2)
+    return render_template('index.html',nb=nb, imgs = imgs)
 
-
-@app.route('/art')
-def art():
-    return render_template('images.html')
 
 
 if __name__ == '__main__':

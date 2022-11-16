@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>TauMah Art</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/css/main.css'>
+</head>
+<body>
+    <style>
+        @keyframes scroll {
+        from {
+                transform: translateX(0px);
+            }
+
+            to {
+                
+                transform: translateX(calc(-{{nb}}*(50vh - 54px)));
+            }
+        }
+    </style>
+
+
+    <header>
+        <h1>TauMah Art</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+    
+    <main>
+        <div id="haut">
+
+        </div>
+        
+        
+        <div id="bas">
+            
+        </div>
+        
+        
+    </main>
+
+    <script>
+
+            // console.log("{{imgs}}");
+            imgs = "{{imgs}}".split(",");
+            console.log(imgs);
+            data = {};
+            for (let i = 0; i < imgs.length; i++) {
+                data[imgs[i]] = {'title': imgs[i], 'desc': imgs[i]};
+            }
+
+        for (let index = 0; index < 2; index++) {
+            
+            
+            let tmp = 1;
+            let img1 = "";
+            Object.entries(data).forEach(([key, value]) => {
+                    if (key !==""){ 
+                    tmp++;
+                    if (img1 == "" && tmp % 2 == 1) {
+                        img1 = key;
+                    }
+                    let img = document.createElement("img");
+                    img.src = "../static/imgs/imgs/" + key;
+                    img.alt = value.title;
+
+
+
+                    if (tmp % 2 == 0) {
+                        document.getElementById("haut").appendChild(img);
+
+                    }
+                    else {
+                        document.getElementById("bas").appendChild(img);
+                    }
+                }
+
+            });
+        }
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
