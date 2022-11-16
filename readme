@@ -1,0 +1,7 @@
+Les fichiers none sont a supprimer si les dossiers parents ne sont plus vides
+
+Les instruction du front sont dans chaques fichiers html
+
+Pour le système de variables, il faut les utiliser comme si c'était une chaine de caractères.
+Tu peux les utiliser uniquement dans les fichiers html donc si tu veux split des données, il faut mettre du js dans des balises script.
+Pour l'inserer suffit de mettre ta variable dans le html comme ceci (dans un p ou n'importe quelle balise): <p>Tamer niqué {{variable}} mecs</p>

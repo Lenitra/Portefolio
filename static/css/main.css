@@ -76,7 +76,7 @@ main{
     width: 20000vw;
     height: calc(100vh - 100px);
     top: 100px;
-    background-color: violet;
+    background-color: rgb(31, 31, 31);
     overflow-y: hidden;
     /* overflow-x: visible; */
     white-space: nowrap;
